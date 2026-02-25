@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}บันทึกข้อมูลพนักงาน{% endblock %} {% block content %}
+    <h2>บันทึกข้อมูลพนักงาน</h2>
+    <form action="" method="POST">
+        {% csrf_token %} <label>Full Name:</label><br>
+        <input type="text" name="fullname" placeholder="กรอกชื่อ-นามสกุล"><br><br>
+        
+        <label>Email:</label><br>
+        <input type="email" name="email" placeholder="example@mail.com"><br><br>
+        
+        <label>Position:</label><br>
+        <select name="position">
+            <option value="manager">Manager</option>
+            <option value="developer">Developer</option>
+        </select><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
